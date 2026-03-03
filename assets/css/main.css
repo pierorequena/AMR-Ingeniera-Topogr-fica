@@ -3052,3 +3052,31 @@ input, select, textarea {
     color: #1e90ff;
     font-size: 18px;
 }
+
+/* ESTILO VIDEOS EN CAMPO */
+
+.video-box {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+.video-box video {
+    width: 100%;
+    display: block;
+}
+
+.video-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+
+
