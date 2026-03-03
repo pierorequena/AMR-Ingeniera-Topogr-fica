@@ -218,6 +218,33 @@ Cupos limitados por grupo.
                     <h3 class="icon solid fa-award">Experiencia Real</h3>
                     <p>Capacitación basada en trabajos reales de campo y obras de construcción.</p>
                 </section>
+
+				
+				<section class="wrapper style2" data-aos="fade-up">
+    <div class="title">Resultados Reales</div>
+    <div class="container">
+        <div class="row" style="text-align:center;">
+
+            <div class="col-4 col-12-medium">
+                <h2><span class="counter" data-target="120">0</span>+</h2>
+                <p>Alumnos Capacitados</p>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <h2><span class="counter" data-target="5">0</span>+</h2>
+                <p>Años de Experiencia</p>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <h2><span class="counter" data-target="95">0</span>%</h2>
+                <p>Satisfacción de Alumnos</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+				
             </div>
 
             <div class="col-4 col-12-medium">
@@ -474,9 +501,45 @@ Escríbenos por WhatsApp
     </a>
 
 </div>
+
+		<script>
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const updateCount = () => {
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+
+// Activar cuando aparezca en pantalla
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      animateCounters();
+      observer.disconnect();
+    }
+  });
+});
+
+observer.observe(document.querySelector('.counter'));
+</script>
 		
 	</body>
 </html>
+
 
 
 
