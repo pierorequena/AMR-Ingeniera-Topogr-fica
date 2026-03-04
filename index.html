@@ -27,6 +27,14 @@
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
+		<meta property="og:image" content="https://tusitio.com/images/hero-topografia.jpg">
+<meta property="og:locale" content="es_PE">
+<link rel="icon" href="images/favicon.png" type="image/png">	
+
+<div style="background:#111; color:white; padding:8px; text-align:center; font-size:14px;">
+📍 San Martín de Porres – Lima | 📞 +51 957 935 820 | ✉ requenalliuya@gmail.com
+</div>
+			
 			<!-- Header -->
 				<section id="header" class="wrapper">
 
@@ -591,13 +599,6 @@ Escríbenos por WhatsApp
     once: true
   });
 </script>
-		
-
-<a href="https://wa.me/51957935820" 
-   target="_blank" 
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:20px; text-decoration:none;">
-   💬
-</a>
 
 <!-- BOTONES FLOTANTES REDES SOCIALES -->
 <div class="social-float">
@@ -675,9 +676,58 @@ const timerFunction = setInterval(function() {
 }, 1000);
 </script>
 
+
+
+		
+		<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Efecto Hover */
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: translateY(-5px);
+}
+
+/* Animación tipo pulso */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+.whatsapp-float {
+  animation: pulse 1.8s infinite;
+}
+</style>
+<a href="https://wa.me/51957935820?text=Hola,%20quiero%20información%20del%20curso%20de%20topografía"
+   target="_blank"
+   class="whatsapp-float">
+   <i class="fab fa-whatsapp"></i>
+   Inscribirme
+</a>
+
+
 		
 	</body>
 </html>
+
 
 
 
